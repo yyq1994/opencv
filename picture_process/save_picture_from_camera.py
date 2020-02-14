@@ -38,5 +38,13 @@ while cap.isOpened():
     # 每1秒保存一张图片
     time.sleep(1)
 
-
 print('\n10张图片保存完成')
+
+#获取视频帧数
+fps =cap.get(cv2.CAP_PROP_FPS) 
+
+# 获取视频宽度
+width = cap.get(cv.CAP_PROP_FRAME_WIDTH)
+
+# 获取视频高度
+HEIGHT = cap.get(cv.CAP_PROP_FRAME_HEIGHT)

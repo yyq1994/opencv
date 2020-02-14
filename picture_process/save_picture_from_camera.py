@@ -29,8 +29,8 @@ while cap.isOpened():
     # 显示图片
     cv.imshow(file_name,frame)
 
-    # 保存图片到文件夹
-    cv.imwrite(file_name,frame)
+    # 保存图片到文件夹,全质量保存
+    cv.imwrite(file_name,frame,[cv.IMWRITE_JPEG_QUALITY,100])
 
     # 提示图片保存成功
     print('第{} 张图片保存成功'.format(i))

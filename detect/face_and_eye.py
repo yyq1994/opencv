@@ -28,6 +28,9 @@ while cap.isOpened():
         
         #对人脸画框
         cv.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),3)
+        
+        #为了防止把鼻孔检测为眼睛，把感兴趣高度设为一半
+        h = int(h/2)
         roi_face = gray[y:y+h,x:x+w]
         roi_color = frame[y:y+h,x:x+w]
         

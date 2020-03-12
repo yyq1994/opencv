@@ -31,10 +31,10 @@ while cap.isOpened():
     # 所有人脸
     for (top,right,bottom,left),face_encoding in zip(face_locations,face_encodings):
         # 单个人脸对比
+        name = '陌生人'
         for i,v in enumerate(total_face_encodings):
             match = face_recognition.compare_faces([v],face_encoding,tolerance=0.3)
-            name = '陌生人'
-
+            
             if match[0]:
                 name = total_names[i]
             cv.rectangle(frame, (left, top), (right, bottom), (0, 255, 255))

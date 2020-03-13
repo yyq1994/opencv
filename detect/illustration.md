@@ -10,9 +10,18 @@
 
 二、gender_classifier.py:
 
+1.容易卡死，目前为止没有找到解决方法
+
 使用文件：haarcascade_frontalface_default.xml、simple_CNN.81-0.96.hdf5
+
 
 
 三、face_recognition.py
 
 1.速度比较慢，明显卡顿
+
+
+
+四、emotion.py
+
+使用文件：simple_CNN.530-0.65.hdf5
